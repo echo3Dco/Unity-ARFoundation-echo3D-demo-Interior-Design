@@ -34,7 +34,7 @@ public class CustomTouchBehavior : MonoBehaviour
 
     public List<string> consoleObjects = new List<string>(); //List of objects placed in echoAR console
     public int current = -1; //Index of object to instantiate next
-
+  
 
 
     void Awake()
@@ -171,6 +171,8 @@ public class CustomTouchBehavior : MonoBehaviour
         return results.Count > 0;
     }
 
+
+    bool controllingUI = false;
     
     /*
      * Called every frame
@@ -189,9 +191,17 @@ public class CustomTouchBehavior : MonoBehaviour
         if (Input.touchCount > 0) //If there's a touch
         {
             Touch touch = Input.GetTouch(0);
-            if (isOverUI(touch.position))
+
+            if (!grabbed)
             {
-                return;
+                if (!controllingUI)
+                {
+                    controllingUI = isOverUI(touch.position); //Only check again if controllingUI is false. If controllingUI is true, continue controlling the UI
+                }
+                if (controllingUI)
+                {
+                    return; //return, so that no transformation is done to any objects and no new objects are created
+                }
             }
             
             if (touch.phase == TouchPhase.Began) //If first touch
@@ -272,7 +282,11 @@ public class CustomTouchBehavior : MonoBehaviour
                     }
                 }
             }
-        }        
+        } else
+        {
+            controllingUI = false;
+            grabbed = false;
+        }     
     }
 
     static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
