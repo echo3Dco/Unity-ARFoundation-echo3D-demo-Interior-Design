@@ -1,5 +1,5 @@
-# Unity-echoAR-demo-Interior-Design
-An interior design AR app demo with Unity and echoAR.
+# Unity-ARFoundation-echoAR-demo-Portal
+An interior design AR app demo with Unity, AR Foundation, and echoAR.
 
 ## Register
 If you don't have an echoAR API key yet, make sure to register for FREE at [echoAR](https://console.echoar.xyz/#/auth/register).
