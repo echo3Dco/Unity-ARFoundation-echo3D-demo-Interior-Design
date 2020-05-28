@@ -1,5 +1,5 @@
-# Interior Design Demo - echoAR
-An interior design AR app demo
+# Unity-echoAR-demo-Interior-Design
+An interior design AR app demo with Unity and echoAR.
 
 ## Register
 If you don't have an echoAR API key yet, make sure to register for FREE at [echoAR](https://console.echoar.xyz/#/auth/register).
@@ -25,4 +25,3 @@ Feel free to reach out at [support@echoAR.xyz](mailto:support@echoAR.xyz) or joi
 <img src="/images/metadata.png">
 <img src="/images/demo1.jpg" width="450">
 <img src="/images/demo2.jpg" width="450">
-"# Unity-echoAR-Interior-Design-App" 
