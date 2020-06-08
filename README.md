@@ -1,4 +1,4 @@
-# Unity-ARFoundation-echoAR-demo-Portal
+# Unity-ARFoundation-echoAR-demo-Interior-Design
 An interior design AR app demo with Unity, AR Foundation, and echoAR.
 
 ## Register
